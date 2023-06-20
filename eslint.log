@@ -1,0 +1,382 @@
+
+/home/runner/work/exp-ultrasonic-waves-velocity-in-liquid-iitb/exp-ultrasonic-waves-velocity-in-liquid-iitb/experiment/simulation/js/activity1.js
+   1:5   warning  'canvas' is defined but never used                        no-unused-vars
+   2:5   warning  'lscale' is assigned a value but never used               no-unused-vars
+   3:5   warning  'context' is defined but never used                       no-unused-vars
+   5:5   warning  'scene' is defined but never used                         no-unused-vars
+   6:5   warning  'rect' is defined but never used                          no-unused-vars
+   8:5   warning  'pp' is assigned a value but never used                   no-unused-vars
+   8:14  warning  'Pannel' is not defined                                   no-undef
+  27:5   warning  'question' is assigned a value but never used             no-unused-vars
+  28:5   warning  'arrayofrandquestion' is assigned a value but never used  no-unused-vars
+  29:5   warning  'current_question' is defined but never used              no-unused-vars
+  30:5   warning  'current_hint' is assigned a value but never used         no-unused-vars
+  31:5   warning  'total_score' is assigned a value but never used          no-unused-vars
+  32:5   warning  'current_score' is assigned a value but never used        no-unused-vars
+  33:5   warning  'global_score' is assigned a value but never used         no-unused-vars
+  34:5   warning  'a1_panel' is defined but never used                      no-unused-vars
+  35:5   warning  'all_text_content' is assigned a value but never used     no-unused-vars
+  36:5   warning  'canvas_box_scale' is already defined                     no-redeclare
+  36:5   warning  'canvas_box_scale' is assigned a value but never used     no-unused-vars
+  37:5   warning  'highlighted_images' is assigned a value but never used   no-unused-vars
+  38:5   warning  'a1_labels' is assigned a value but never used            no-unused-vars
+  39:5   warning  'a1_scene' is defined but never used                      no-unused-vars
+  40:5   warning  'a1_index' is assigned a value but never used             no-unused-vars
+  41:5   warning  'text' is defined but never used                          no-unused-vars
+  42:5   warning  'ans' is defined but never used                           no-unused-vars
+  43:5   warning  'question_text' is defined but never used                 no-unused-vars
+  45:5   warning  'display_result' is defined but never used                no-unused-vars
+  46:5   warning  'display_score' is defined but never used                 no-unused-vars
+  47:5   warning  'timer1' is defined but never used                        no-unused-vars
+  48:5   warning  'current_index' is defined but never used                 no-unused-vars
+
+/home/runner/work/exp-ultrasonic-waves-velocity-in-liquid-iitb/exp-ultrasonic-waves-velocity-in-liquid-iitb/experiment/simulation/js/activity3.js
+   3:5   warning  'pp' is not defined                             no-undef
+   4:5   warning  'pp' is not defined                             no-undef
+   5:5   warning  'pp' is not defined                             no-undef
+   6:5   warning  'pp' is not defined                             no-undef
+  45:5   warning  'pp' is not defined                             no-undef
+  51:25  warning  'data' is not defined                           no-undef
+  52:50  warning  'data' is not defined                           no-undef
+  52:68  warning  'data' is not defined                           no-undef
+  55:10  warning  'set_fluid' is defined but never used           no-unused-vars
+  60:9   warning  'selected_fluid' is not defined                 no-undef
+  70:10  warning  'set_frequency' is defined but never used       no-unused-vars
+  71:9   warning  'fluid_sel' is assigned a value but never used  no-unused-vars
+  75:9   warning  'selected_frequency' is not defined             no-undef
+  77:9   warning  'set_table1' is not defined                     no-undef
+  80:9   warning  'calculate_table1' is not defined               no-undef
+  87:25  warning  'table1' is not defined                         no-undef
+  88:9   warning  'table1' is not defined                         no-undef
+  88:35  warning  'std_deviation' is not defined                  no-undef
+  88:49  warning  'table1' is not defined                         no-undef
+  91:10  warning  'set_readings' is defined but never used        no-unused-vars
+  95:24  warning  'table1' is not defined                         no-undef
+  96:24  warning  'table1' is not defined                         no-undef
+  97:5   warning  'pp' is not defined                             no-undef
+  98:5   warning  'pp' is not defined                             no-undef
+
+/home/runner/work/exp-ultrasonic-waves-velocity-in-liquid-iitb/exp-ultrasonic-waves-velocity-in-liquid-iitb/experiment/simulation/js/activity4.js
+   3:10  warning  'activity4' is defined but never used     no-unused-vars
+   4:5   warning  'pp' is not defined                       no-undef
+   5:5   warning  'pp' is not defined                       no-undef
+   6:5   warning  'pp' is not defined                       no-undef
+   7:5   warning  'pp' is not defined                       no-undef
+   9:37  warning  'table1' is not defined                   no-undef
+   9:56  warning  'table1' is not defined                   no-undef
+  10:29  warning  'Table' is not defined                    no-undef
+  11:5   warning  'pp' is not defined                       no-undef
+  16:77  warning  'val_1_line' is not defined               no-undef
+  20:71  warning  'least_count' is not defined              no-undef
+  23:5   warning  'pp' is not defined                       no-undef
+  24:27  warning  'bootstrap' is not defined                no-undef
+  30:19  warning  'table1' is not defined                   no-undef
+  34:29  warning  'selected_frequency' is not defined       no-undef
+  36:10  warning  'verify_act4' is defined but never used   no-unused-vars
+  40:10  warning  'verify_values' is not defined            no-undef
+  40:48  warning  'table1' is not defined                   no-undef
+  44:10  warning  'verify_values' is not defined            no-undef
+  44:48  warning  'table1' is not defined                   no-undef
+  48:10  warning  'verify_values' is not defined            no-undef
+  48:48  warning  'table1' is not defined                   no-undef
+  70:5   warning  'pp' is not defined                       no-undef
+  71:27  warning  'bootstrap' is not defined                no-undef
+  74:10  warning  'act4_verify2' is defined but never used  no-unused-vars
+  77:10  warning  'verify_values' is not defined            no-undef
+  81:10  warning  'verify_values' is not defined            no-undef
+  86:5   warning  'pp' is not defined                       no-undef
+
+/home/runner/work/exp-ultrasonic-waves-velocity-in-liquid-iitb/exp-ultrasonic-waves-velocity-in-liquid-iitb/experiment/simulation/js/activity6.js
+    1:10  warning  'activity6' is defined but never used           no-unused-vars
+    2:5   warning  'pp' is not defined                             no-undef
+    3:5   warning  'pp' is not defined                             no-undef
+    4:5   warning  'pp' is not defined                             no-undef
+   11:34  warning  'Ma' is not defined                             no-undef
+   14:34  warning  'Mc' is not defined                             no-undef
+   22:34  warning  'MW1' is not defined                            no-undef
+   25:34  warning  'MW2' is not defined                            no-undef
+   33:34  warning  'AA' is not defined                             no-undef
+   36:34  warning  'AB' is not defined                             no-undef
+   39:34  warning  'AC' is not defined                             no-undef
+   47:34  warning  'slope1' is not defined                         no-undef
+   50:34  warning  'slope2' is not defined                         no-undef
+   55:5   warning  'pp' is not defined                             no-undef
+   62:24  warning  'Table2' is not defined                         no-undef
+   69:24  warning  'Table2' is not defined                         no-undef
+   76:24  warning  'Table2' is not defined                         no-undef
+   77:5   warning  'pp' is not defined                             no-undef
+   78:5   warning  'pp' is not defined                             no-undef
+   79:5   warning  'pp' is not defined                             no-undef
+   84:5   warning  'pp' is not defined                             no-undef
+   85:17  warning  'mass_comp1' is not defined                     no-undef
+   85:29  warning  'mass_comp2' is not defined                     no-undef
+   85:41  warning  'moles_comp1' is not defined                    no-undef
+   85:54  warning  'moles_comp2' is not defined                    no-undef
+   85:67  warning  'moles_fraction_comp1' is not defined           no-undef
+   85:89  warning  'moles_fraction_comp2' is not defined           no-undef
+   87:10  warning  'verify_act6_inputs' is defined but never used  no-unused-vars
+   94:10  warning  'verify_values' is not defined                  no-undef
+   94:48  warning  'mass_comp1' is not defined                     no-undef
+   98:10  warning  'verify_values' is not defined                  no-undef
+   98:48  warning  'mass_comp2' is not defined                     no-undef
+  102:10  warning  'verify_values' is not defined                  no-undef
+  102:48  warning  'moles_comp1' is not defined                    no-undef
+  106:10  warning  'verify_values' is not defined                  no-undef
+  106:48  warning  'moles_comp2' is not defined                    no-undef
+  110:10  warning  'verify_values' is not defined                  no-undef
+  110:48  warning  'moles_fraction_comp1' is not defined           no-undef
+  114:10  warning  'verify_values' is not defined                  no-undef
+  114:48  warning  'moles_fraction_comp2' is not defined           no-undef
+  119:5   warning  'activity7' is not defined                      no-undef
+
+/home/runner/work/exp-ultrasonic-waves-velocity-in-liquid-iitb/exp-ultrasonic-waves-velocity-in-liquid-iitb/experiment/simulation/js/activity7.js
+   2:10   warning  'activity7' is defined but never used    no-unused-vars
+   3:5    warning  'pp' is not defined                      no-undef
+   4:5    warning  'pp' is not defined                      no-undef
+   5:5    warning  'pp' is not defined                      no-undef
+   7:30   warning  'composition' is not defined             no-undef
+   7:42   warning  'selected_index' is not defined          no-undef
+   7:59   warning  'calculated_table' is not defined        no-undef
+   7:76   warning  'selected_index' is not defined          no-undef
+   7:107  warning  'calculated_table' is not defined        no-undef
+   7:124  warning  'selected_index' is not defined          no-undef
+   7:155  warning  'calculated_table' is not defined        no-undef
+   7:172  warning  'selected_index' is not defined          no-undef
+   8:24   warning  'Table' is not defined                   no-undef
+   9:5    warning  'pp' is not defined                      no-undef
+  14:19   warning  'A1' is not defined                      no-undef
+  14:31   warning  'A2' is not defined                      no-undef
+  15:19   warning  'B1' is not defined                      no-undef
+  15:31   warning  'B2' is not defined                      no-undef
+  16:19   warning  'C1' is not defined                      no-undef
+  16:31   warning  'C2' is not defined                      no-undef
+  17:18   warning  'P' is not defined                       no-undef
+  26:5    warning  'pp' is not defined                      no-undef
+  28:10   warning  'verify_act7' is defined but never used  no-unused-vars
+  33:10   warning  'verify_values' is not defined           no-undef
+  33:48   warning  'calculated_table' is not defined        no-undef
+  33:65   warning  'selected_index' is not defined          no-undef
+  37:10   warning  'verify_values' is not defined           no-undef
+  37:48   warning  'calculated_table' is not defined        no-undef
+  37:65   warning  'selected_index' is not defined          no-undef
+  41:10   warning  'verify_values' is not defined           no-undef
+  41:48   warning  'calculated_table' is not defined        no-undef
+  41:65   warning  'selected_index' is not defined          no-undef
+  45:10   warning  'verify_values' is not defined           no-undef
+  45:48   warning  'calculated_table' is not defined        no-undef
+  45:65   warning  'selected_index' is not defined          no-undef
+  53:5    warning  'pp' is not defined                      no-undef
+  54:5    warning  'pp' is not defined                      no-undef
+  55:5    warning  'pp' is not defined                      no-undef
+  58:25   warning  'calculated_table' is not defined        no-undef
+  60:34   warning  'composition' is not defined             no-undef
+  61:29   warning  'calculated_table' is not defined        no-undef
+  62:42   warning  'calculated_table' is not defined        no-undef
+  65:24   warning  'Table' is not defined                   no-undef
+  66:5    warning  'pp' is not defined                      no-undef
+  69:10   warning  'selected_index' is not defined          no-undef
+  70:5    warning  'pp' is not defined                      no-undef
+  71:5    warning  'pp' is not defined                      no-undef
+
+/home/runner/work/exp-ultrasonic-waves-velocity-in-liquid-iitb/exp-ultrasonic-waves-velocity-in-liquid-iitb/experiment/simulation/js/activity8.js
+   1:10  warning  'activity8' is defined but never used  no-unused-vars
+   2:5   warning  'pp' is not defined                    no-undef
+   3:5   warning  'pp' is not defined                    no-undef
+   8:5   warning  'pp' is not defined                    no-undef
+   9:5   warning  'pp' is not defined                    no-undef
+  14:5   warning  'label' is not defined                 no-undef
+  15:5   warning  'graph_data' is not defined            no-undef
+  16:25  warning  'calculated_table' is not defined      no-undef
+  17:9   warning  'label' is not defined                 no-undef
+  17:20  warning  'calculated_table' is not defined      no-undef
+  18:9   warning  'graph_data' is not defined            no-undef
+  18:34  warning  'calculated_table' is not defined      no-undef
+  33:21  warning  'Chart' is not defined                 no-undef
+  36:21  warning  'label' is not defined                 no-undef
+  40:27  warning  'graph_data' is not defined            no-undef
+  52:27  warning  'graph_data1' is not defined           no-undef
+  85:30  warning  'selected_name' is not defined         no-undef
+  85:61  warning  'composition' is not defined           no-undef
+  85:73  warning  'selected_index' is not defined        no-undef
+  94:5   warning  'pol1_data' is not defined             no-undef
+  94:17  warning  'regression_linear' is not defined     no-undef
+  94:35  warning  'label' is not defined                 no-undef
+  94:42  warning  'graph_data' is not defined            no-undef
+  95:5   warning  'graph_data1' is not defined           no-undef
+  97:25  warning  'label' is not defined                 no-undef
+  98:9   warning  'graph_data1' is not defined           no-undef
+  98:26  warning  'pol1_data' is not defined             no-undef
+  98:41  warning  'label' is not defined                 no-undef
+  98:52  warning  'pol1_data' is not defined             no-undef
+
+/home/runner/work/exp-ultrasonic-waves-velocity-in-liquid-iitb/exp-ultrasonic-waves-velocity-in-liquid-iitb/experiment/simulation/js/common.js
+   1:10  warning  'verify_values' is defined but never used                no-unused-vars
+  18:10  warning  'std_deviation' is defined but never used                no-unused-vars
+  23:10  warning  'regression_linear' is defined but never used            no-unused-vars
+  40:10  warning  'ascending_random_array' is defined but never used       no-unused-vars
+  42:12  warning  Unexpected constant condition                            no-constant-condition
+  59:10  warning  'regression_linear_2variable' is defined but never used  no-unused-vars
+
+/home/runner/work/exp-ultrasonic-waves-velocity-in-liquid-iitb/exp-ultrasonic-waves-velocity-in-liquid-iitb/experiment/simulation/js/dummy.js
+  2:14  warning  'Pannel' is not defined  no-undef
+
+/home/runner/work/exp-ultrasonic-waves-velocity-in-liquid-iitb/exp-ultrasonic-waves-velocity-in-liquid-iitb/experiment/simulation/js/geomerty.js
+   33:49   warning  'lscale' is not defined          no-undef
+   34:49   warning  'lscale' is not defined          no-undef
+   46:23   warning  'pt1' is defined but never used  no-unused-vars
+   46:28   warning  'pt2' is defined but never used  no-unused-vars
+   46:33   warning  'pt3' is defined but never used  no-unused-vars
+   50:24   warning  'geo' is defined but never used  no-unused-vars
+   69:44   warning  'lscale' is not defined          no-undef
+   69:66   warning  'lscale' is not defined          no-undef
+   69:88   warning  'lscale' is not defined          no-undef
+   82:48   warning  'lscale' is not defined          no-undef
+   83:48   warning  'lscale' is not defined          no-undef
+  108:47   warning  'lscale' is not defined          no-undef
+  108:69   warning  'lscale' is not defined          no-undef
+  109:60   warning  'lscale' is not defined          no-undef
+  109:95   warning  'lscale' is not defined          no-undef
+  131:39   warning  'lscale' is not defined          no-undef
+  131:57   warning  'lscale' is not defined          no-undef
+  132:39   warning  'lscale' is not defined          no-undef
+  132:57   warning  'lscale' is not defined          no-undef
+  181:39   warning  'lscale' is not defined          no-undef
+  181:57   warning  'lscale' is not defined          no-undef
+  182:39   warning  'lscale' is not defined          no-undef
+  182:57   warning  'lscale' is not defined          no-undef
+  225:33   warning  'lscale' is not defined          no-undef
+  226:33   warning  'lscale' is not defined          no-undef
+  274:50   warning  'lscale' is not defined          no-undef
+  274:72   warning  'lscale' is not defined          no-undef
+  279:61   warning  'lscale' is not defined          no-undef
+  279:84   warning  'lscale' is not defined          no-undef
+  279:102  warning  'lscale' is not defined          no-undef
+  279:120  warning  'lscale' is not defined          no-undef
+  293:33   warning  'lscale' is not defined          no-undef
+  294:33   warning  'lscale' is not defined          no-undef
+  295:41   warning  'lscale' is not defined          no-undef
+  295:64   warning  'lscale' is not defined          no-undef
+  295:98   warning  'lscale' is not defined          no-undef
+  295:121  warning  'lscale' is not defined          no-undef
+  296:45   warning  'lscale' is not defined          no-undef
+  296:68   warning  'lscale' is not defined          no-undef
+  296:102  warning  'lscale' is not defined          no-undef
+  296:125  warning  'lscale' is not defined          no-undef
+  323:61   warning  'lscale' is not defined          no-undef
+  323:90   warning  'lscale' is not defined          no-undef
+  324:61   warning  'lscale' is not defined          no-undef
+  324:96   warning  'lscale' is not defined          no-undef
+  325:66   warning  'lscale' is not defined          no-undef
+  325:101  warning  'lscale' is not defined          no-undef
+  326:66   warning  'lscale' is not defined          no-undef
+  326:100  warning  'lscale' is not defined          no-undef
+  327:67   warning  'lscale' is not defined          no-undef
+  327:101  warning  'lscale' is not defined          no-undef
+  328:67   warning  'lscale' is not defined          no-undef
+  328:96   warning  'lscale' is not defined          no-undef
+  329:61   warning  'lscale' is not defined          no-undef
+  329:90   warning  'lscale' is not defined          no-undef
+  346:33   warning  'lscale' is not defined          no-undef
+  347:33   warning  'lscale' is not defined          no-undef
+  376:46   warning  'lscale' is not defined          no-undef
+  382:50   warning  'lscale' is not defined          no-undef
+  382:72   warning  'lscale' is not defined          no-undef
+  411:52   warning  'lscale' is not defined          no-undef
+  411:79   warning  'lscale' is not defined          no-undef
+  413:56   warning  'lscale' is not defined          no-undef
+  413:83   warning  'lscale' is not defined          no-undef
+  450:50   warning  'lscale' is not defined          no-undef
+  450:72   warning  'lscale' is not defined          no-undef
+  456:61   warning  'lscale' is not defined          no-undef
+  456:84   warning  'lscale' is not defined          no-undef
+  456:102  warning  'lscale' is not defined          no-undef
+  456:120  warning  'lscale' is not defined          no-undef
+  470:33   warning  'lscale' is not defined          no-undef
+  471:33   warning  'lscale' is not defined          no-undef
+  472:41   warning  'lscale' is not defined          no-undef
+  472:64   warning  'lscale' is not defined          no-undef
+  472:98   warning  'lscale' is not defined          no-undef
+  472:121  warning  'lscale' is not defined          no-undef
+  473:45   warning  'lscale' is not defined          no-undef
+  473:68   warning  'lscale' is not defined          no-undef
+  473:102  warning  'lscale' is not defined          no-undef
+  473:125  warning  'lscale' is not defined          no-undef
+  502:50   warning  'lscale' is not defined          no-undef
+  502:72   warning  'lscale' is not defined          no-undef
+  507:139  warning  'lscale' is not defined          no-undef
+  507:172  warning  'lscale' is not defined          no-undef
+  507:205  warning  'lscale' is not defined          no-undef
+  507:225  warning  'lscale' is not defined          no-undef
+  528:50   warning  'lscale' is not defined          no-undef
+  528:72   warning  'lscale' is not defined          no-undef
+  533:139  warning  'lscale' is not defined          no-undef
+  533:172  warning  'lscale' is not defined          no-undef
+  533:205  warning  'lscale' is not defined          no-undef
+  533:225  warning  'lscale' is not defined          no-undef
+  555:50   warning  'lscale' is not defined          no-undef
+  555:72   warning  'lscale' is not defined          no-undef
+  560:133  warning  'lscale' is not defined          no-undef
+  560:172  warning  'lscale' is not defined          no-undef
+  560:205  warning  'lscale' is not defined          no-undef
+  560:224  warning  'lscale' is not defined          no-undef
+  584:39   warning  'lscale' is not defined          no-undef
+  584:53   warning  'lscale' is not defined          no-undef
+  585:39   warning  'lscale' is not defined          no-undef
+  585:53   warning  'lscale' is not defined          no-undef
+  586:39   warning  'lscale' is not defined          no-undef
+  586:53   warning  'lscale' is not defined          no-undef
+  587:39   warning  'lscale' is not defined          no-undef
+  587:53   warning  'lscale' is not defined          no-undef
+  594:36   warning  'lscale' is not defined          no-undef
+  594:50   warning  'lscale' is not defined          no-undef
+  594:63   warning  'lscale' is not defined          no-undef
+  605:36   warning  'lscale' is not defined          no-undef
+  605:50   warning  'lscale' is not defined          no-undef
+  605:63   warning  'lscale' is not defined          no-undef
+  632:46   warning  'lscale' is not defined          no-undef
+  637:50   warning  'lscale' is not defined          no-undef
+  637:72   warning  'lscale' is not defined          no-undef
+  659:50   warning  'lscale' is not defined          no-undef
+  659:72   warning  'lscale' is not defined          no-undef
+  663:46   warning  'lscale' is not defined          no-undef
+  664:46   warning  'lscale' is not defined          no-undef
+  664:67   warning  'lscale' is not defined          no-undef
+  665:49   warning  'lscale' is not defined          no-undef
+  702:50   warning  'lscale' is not defined          no-undef
+  702:72   warning  'lscale' is not defined          no-undef
+  718:38   warning  'lscale' is not defined          no-undef
+  718:51   warning  'lscale' is not defined          no-undef
+  720:38   warning  'lscale' is not defined          no-undef
+  722:38   warning  'lscale' is not defined          no-undef
+  722:52   warning  'lscale' is not defined          no-undef
+
+/home/runner/work/exp-ultrasonic-waves-velocity-in-liquid-iitb/exp-ultrasonic-waves-velocity-in-liquid-iitb/experiment/simulation/js/pannel.js
+    8:7  warning  'Pannel' is defined but never used  no-unused-vars
+  151:7  warning  'Table2' is defined but never used  no-unused-vars
+
+/home/runner/work/exp-ultrasonic-waves-velocity-in-liquid-iitb/exp-ultrasonic-waves-velocity-in-liquid-iitb/experiment/simulation/js/scene.js
+   1:7    warning  'Scene' is defined but never used         no-unused-vars
+  11:9    warning  'context' is not defined                  no-undef
+  11:33   warning  'canvas' is not defined                   no-undef
+  11:47   warning  'canvas' is not defined                   no-undef
+  27:5    warning  'context' is not defined                  no-undef
+  28:9    warning  'grd' is assigned a value but never used  no-unused-vars
+  28:15   warning  'context' is not defined                  no-undef
+  28:44   warning  'canvas' is not defined                   no-undef
+  28:62   warning  'canvas' is not defined                   no-undef
+  28:84   warning  'canvas' is not defined                   no-undef
+  28:102  warning  'canvas' is not defined                   no-undef
+  28:121  warning  'canvas' is not defined                   no-undef
+  36:5    warning  'context' is not defined                  no-undef
+  37:5    warning  'context' is not defined                  no-undef
+  37:28   warning  'canvas' is not defined                   no-undef
+  37:42   warning  'canvas' is not defined                   no-undef
+  38:5    warning  'context' is not defined                  no-undef
+  39:5    warning  'context' is not defined                  no-undef
+
+/home/runner/work/exp-ultrasonic-waves-velocity-in-liquid-iitb/exp-ultrasonic-waves-velocity-in-liquid-iitb/experiment/simulation/js/test.js
+  2:14  warning  'Pannel' is not defined                     no-undef
+  4:5   warning  'table' is assigned a value but never used  no-unused-vars
+
+✖ 355 problems (0 errors, 355 warnings)
+
