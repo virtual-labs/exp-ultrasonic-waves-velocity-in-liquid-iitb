@@ -19,37 +19,37 @@ var Chemistry;
             }
         }
         get stpt() {
-            return (this._stpt);
+            return this._stpt;
         }
         get draggable() {
-            return (this._dragable);
+            return this._dragable;
         }
         draw() { }
         calculate() { }
         get area() {
-            return (0);
+            return 0;
         }
         isinside(point) {
             let dx = (this._stpt.x - point.x) * lscale;
             let dy = (this._stpt.y - point.y) * lscale;
             let r = Math.pow(dx * dx + dy * dy, 0.5);
             if (r < 50) {
-                return (true);
+                return true;
             }
             else {
-                return (false);
+                return false;
             }
         }
         lock() {
             this._dragable = false;
         }
         triangle_area(pt1, pt2, pt3) {
-            return (0);
+            return 0;
         }
         change_value() { }
         set_connection(geo) { }
         random(max, min) {
-            return (Math.random() * (max - min) + min);
+            return Math.random() * (max - min) + min;
         }
     }
     Chemistry.Geometry = Geometry;
@@ -57,7 +57,7 @@ var Chemistry;
         constructor(stpt, radius, canvas) {
             super();
             this.value = 0;
-            this.color = "red";
+            this.color = 'red';
             this.connected = false;
             this.stpt = stpt;
             this.radius = radius;
@@ -83,20 +83,20 @@ var Chemistry;
             let dy = (this.stpt.y - point.y) * lscale;
             let r = Math.pow(dx * dx + dy * dy, 0.5);
             if (r < this.radius) {
-                return (true);
+                return true;
             }
             else {
-                return (false);
+                return false;
             }
         }
         change_value() {
             if (this.value == 0) {
                 this.value = 1;
-                this.color = "green";
+                this.color = 'green';
             }
             else if (this.value == 1) {
                 this.value = 0;
-                this.color = "red";
+                this.color = 'red';
             }
         }
         set_connection(geo) {
@@ -121,13 +121,13 @@ var Chemistry;
             this.a = major_length / 2;
             this.b = minor_length / 2;
             this.canvas = canvas;
-            this.context = this.canvas.getContext("2d");
+            this.context = this.canvas.getContext('2d');
             this.points = [];
         }
         calculate() {
             this.points = [];
             for (let ang = 0; ang < 360; ang++) {
-                let ang1 = ang * Math.PI / 180;
+                let ang1 = (ang * Math.PI) / 180;
                 let x = this.stpt.x * lscale + this.a * lscale * Math.cos(ang1);
                 let y = this.stpt.y * lscale + this.b * lscale * Math.sin(ang1);
                 // console.log(lscale);
@@ -142,7 +142,7 @@ var Chemistry;
                 this.context.lineTo(this.points[i].x, this.points[i].y);
             }
             this.context.lineWidth = 1;
-            this.context.fillStyle = "blue";
+            this.context.fillStyle = 'blue';
             this.context.closePath();
             this.context.fill();
             this.context.stroke();
@@ -150,11 +150,15 @@ var Chemistry;
         get area() {
             let a = 0;
             for (let i = 0; i < this.points.length - 1; i++) {
-                a += this.points[i].x * this.points[i + 1].y - this.points[i + 1].x * this.points[i].y;
+                a +=
+                    this.points[i].x * this.points[i + 1].y -
+                        this.points[i + 1].x * this.points[i].y;
             }
-            a += this.points[this.points.length - 1].x * this.points[0].y - this.points[0].x * this.points[this.points.length - 1].y;
+            a +=
+                this.points[this.points.length - 1].x * this.points[0].y -
+                    this.points[0].x * this.points[this.points.length - 1].y;
             a = a / 2;
-            return (Math.abs(a));
+            return Math.abs(a);
         }
     }
     Chemistry.Ellipse = Ellipse;
@@ -163,12 +167,12 @@ var Chemistry;
             super();
             this.points = [];
             this.stang = 0;
-            this.color = "blue";
+            this.color = 'blue';
             this.stpt = stpt;
             this.l = l;
             this.n = n;
             this.canvas = canvas;
-            this.context = this.canvas.getContext("2d");
+            this.context = this.canvas.getContext('2d');
             this.points = [];
             this.vx = this.random(5, 1);
         }
@@ -177,7 +181,7 @@ var Chemistry;
             let angbet = 360.0 / this.n;
             let ang = this.stang;
             for (let i = 0; i < this.n; i++) {
-                let ang1 = ang * Math.PI / 180;
+                let ang1 = (ang * Math.PI) / 180;
                 let x = this.stpt.x * lscale + this.l * lscale * Math.cos(ang1);
                 let y = this.stpt.y * lscale + this.l * lscale * Math.sin(ang1);
                 this.points.push(new Point(x, y));
@@ -215,11 +219,15 @@ var Chemistry;
         get area() {
             let a = 0;
             for (let i = 0; i < this.points.length - 1; i++) {
-                a += this.points[i].x * this.points[i + 1].y - this.points[i + 1].x * this.points[i].y;
+                a +=
+                    this.points[i].x * this.points[i + 1].y -
+                        this.points[i + 1].x * this.points[i].y;
             }
-            a += this.points[this.points.length - 1].x * this.points[0].y - this.points[0].x * this.points[this.points.length - 1].y;
+            a +=
+                this.points[this.points.length - 1].x * this.points[0].y -
+                    this.points[0].x * this.points[this.points.length - 1].y;
             a = a / 2;
-            return (a);
+            return a;
         }
         isinside(point) {
             point.x = point.x * lscale;
@@ -230,10 +238,10 @@ var Chemistry;
             }
             a += this.triangle_area(point, this.points[this.points.length - 1], this.points[0]);
             if (Math.abs(this.area - a) < 0.000001) {
-                return (true);
+                return true;
             }
             else {
-                return (false);
+                return false;
             }
         }
         triangle_area(pt1, pt2, pt3) {
@@ -241,7 +249,7 @@ var Chemistry;
             a += pt1.x * pt2.y - pt2.x * pt1.y;
             a += pt2.x * pt3.y - pt3.x * pt2.y;
             a += pt3.x * pt1.y - pt1.x * pt3.y;
-            return (Math.abs(a / 2));
+            return Math.abs(a / 2);
         }
         motion_x() {
             this.stpt.x += this.vx;
@@ -262,7 +270,7 @@ var Chemistry;
             this.stang = 0;
             this.img = image;
             this.canvas = canvas;
-            this.context = this.canvas.getContext("2d");
+            this.context = this.canvas.getContext('2d');
             this.stpt = stpt;
             this.vx = this.random(5, 1);
         }
@@ -276,12 +284,12 @@ var Chemistry;
             if (this.revolve) {
                 this.rotate();
             }
-            this.context.drawImage(this.img, -this.dx / 2 * lscale, -this.dy / 2 * lscale, this.dx * lscale, this.dy * lscale);
+            this.context.drawImage(this.img, (-this.dx / 2) * lscale, (-this.dy / 2) * lscale, this.dx * lscale, this.dy * lscale);
             this.context.restore();
         }
         rotate() {
             this.stang--;
-            this.context.rotate(this.stang * Math.PI / 180);
+            this.context.rotate((this.stang * Math.PI) / 180);
             this.rotate_check();
         }
         rotate_check() {
@@ -292,12 +300,14 @@ var Chemistry;
         isinside(point) {
             point.x = point.x * lscale;
             point.y = point.y * lscale;
-            if (point.x > this.stpt.x * lscale - this.dx / 2 * lscale && point.x < this.stpt.x * lscale + this.dx / 2 * lscale) {
-                if (point.y > this.stpt.y * lscale - this.dy / 2 * lscale && point.y < this.stpt.y * lscale + this.dy / 2 * lscale) {
-                    return (true);
+            if (point.x > this.stpt.x * lscale - (this.dx / 2) * lscale &&
+                point.x < this.stpt.x * lscale + (this.dx / 2) * lscale) {
+                if (point.y > this.stpt.y * lscale - (this.dy / 2) * lscale &&
+                    point.y < this.stpt.y * lscale + (this.dy / 2) * lscale) {
+                    return true;
                 }
             }
-            return (false);
+            return false;
         }
         motion_x() {
             this.stpt.x += this.vx;
@@ -336,8 +346,8 @@ var Chemistry;
                 this.path.lineTo(this.points[i].x, this.points[i].y);
             }
             this.context.beginPath();
-            this.context.strokeStyle = "black";
-            this.context.fillStyle = "red";
+            this.context.strokeStyle = 'black';
+            this.context.fillStyle = 'red';
             this.context.fill(this.path);
             this.context.lineWidth = 1;
             this.context.stroke(this.path);
@@ -350,29 +360,29 @@ var Chemistry;
             this.context.scale(1, -1);
             if (this.context.isPointInPath(this.path, point.x, point.y)) {
                 this.context.restore();
-                return (true);
+                return true;
             }
             else {
                 this.context.restore();
-                return (false);
+                return false;
             }
         }
     }
     Chemistry.L_bracket = L_bracket;
     class Text {
         constructor(text, stpt, canvas) {
-            this.font = "17px Arial";
-            this.color = "black";
+            this.font = '17px Arial';
+            this.color = 'black';
             this.angle = 0;
-            this.textalingment = "left";
+            this.textalingment = 'left';
             this.stpt = stpt;
             this.canvas = canvas;
-            this.context = this.canvas.getContext("2d");
+            this.context = this.canvas.getContext('2d');
             this.text = text;
         }
         draw() {
             // this.font=`17px Arial`;
-            let y = this.font.split("px");
+            let y = this.font.split('px');
             let font_size = parseInt(y[0]) * lscale;
             //this.font = `${font_size}px Arial`;
             this.context.font = `${font_size}px Arial`;
@@ -380,7 +390,7 @@ var Chemistry;
             this.context.textAlign = this.textalingment;
             this.context.save();
             this.context.translate(this.stpt.x * lscale, this.stpt.y * lscale);
-            this.context.rotate(this.angle * Math.PI / 180);
+            this.context.rotate((this.angle * Math.PI) / 180);
             this.context.scale(1, -1);
             this.context.fillText(this.text, 0, 0);
             this.context.restore();
@@ -395,13 +405,14 @@ var Chemistry;
             this.stpt = stpt;
             this.geo = geo;
             this.canvas = canvas;
-            this.context = this.canvas.getContext("2d");
+            this.context = this.canvas.getContext('2d');
         }
         calculate() {
             this.points = [];
             for (let i = 0; i <= 360; i++) {
                 let x = this.stpt.x + i;
-                let y = this.stpt.y + this.magnitude * Math.sin(i * Math.PI / 180);
+                let y = this.stpt.y +
+                    this.magnitude * Math.sin((i * Math.PI) / 180);
                 this.points.push(new Point(x, y));
             }
         }
@@ -412,10 +423,10 @@ var Chemistry;
             for (let i = 1; i <= 360; i++) {
                 this.context.lineTo(this.points[i].x * lscale, this.points[i].y * lscale);
             }
-            this.context.strokeStyle = "red";
+            this.context.strokeStyle = 'red';
             this.context.lineWidth = 2;
             this.context.stroke();
-            this.context.strokeStyle = "black";
+            this.context.strokeStyle = 'black';
             this.geo.stpt = new Point(this.points[this.k].x, this.points[this.k].y);
             this.geo.draw();
             this.update();
@@ -438,7 +449,7 @@ var Chemistry;
             this.canvas = canvas;
             this.dx = width;
             this.dy = height;
-            this.context = this.canvas.getContext("2d");
+            this.context = this.canvas.getContext('2d');
             this.stpt = stpt;
             this.vx = this.random(5, 1);
         }
@@ -452,13 +463,13 @@ var Chemistry;
             if (this.revolve) {
                 this.rotate();
             }
-            this.context.rotate(this.stang * Math.PI / 180);
-            this.context.drawImage(this.img, -this.dx / 2 * lscale, -this.dy / 2 * lscale, this.dx * lscale, this.dy * lscale);
+            this.context.rotate((this.stang * Math.PI) / 180);
+            this.context.drawImage(this.img, (-this.dx / 2) * lscale, (-this.dy / 2) * lscale, this.dx * lscale, this.dy * lscale);
             this.context.restore();
         }
         rotate() {
             this.stang--;
-            this.context.rotate(this.stang * Math.PI / 180);
+            this.context.rotate((this.stang * Math.PI) / 180);
             this.rotate_check();
         }
         rotate_check() {
@@ -469,12 +480,14 @@ var Chemistry;
         isinside(point) {
             point.x = point.x * lscale;
             point.y = point.y * lscale;
-            if (point.x > this.stpt.x * lscale - this.dx / 2 * lscale && point.x < this.stpt.x * lscale + this.dx / 2 * lscale) {
-                if (point.y > this.stpt.y * lscale - this.dy / 2 * lscale && point.y < this.stpt.y * lscale + this.dy / 2 * lscale) {
-                    return (true);
+            if (point.x > this.stpt.x * lscale - (this.dx / 2) * lscale &&
+                point.x < this.stpt.x * lscale + (this.dx / 2) * lscale) {
+                if (point.y > this.stpt.y * lscale - (this.dy / 2) * lscale &&
+                    point.y < this.stpt.y * lscale + (this.dy / 2) * lscale) {
+                    return true;
                 }
             }
-            return (false);
+            return false;
         }
         motion_x() {
             this.stpt.x += this.vx;
@@ -504,7 +517,7 @@ var Chemistry;
             if (this.revolve) {
                 this.rotate();
             }
-            this.context.drawImage(this.img, this.startx, this.dy - this.l, this.dx - this.width, this.dy, (-this.dx / 2 + this.startx) * lscale, (this.dy / 2 - this.l) * lscale, (this.dx - this.width) * lscale, (this.dy) * lscale);
+            this.context.drawImage(this.img, this.startx, this.dy - this.l, this.dx - this.width, this.dy, (-this.dx / 2 + this.startx) * lscale, (this.dy / 2 - this.l) * lscale, (this.dx - this.width) * lscale, this.dy * lscale);
             if (this.l < this.l_last) {
                 this.l++;
             }
@@ -530,7 +543,7 @@ var Chemistry;
             if (this.revolve) {
                 this.rotate();
             }
-            this.context.drawImage(this.img, this.startx, this.dy - this.l, this.dx - this.width, this.dy, (-this.dx / 2 + this.startx) * lscale, (this.dy / 2 - this.l) * lscale, (this.dx - this.width) * lscale, (this.dy) * lscale);
+            this.context.drawImage(this.img, this.startx, this.dy - this.l, this.dx - this.width, this.dy, (-this.dx / 2 + this.startx) * lscale, (this.dy / 2 - this.l) * lscale, (this.dx - this.width) * lscale, this.dy * lscale);
             if (this.width > this.width_last) {
                 this.width--;
             }
@@ -557,7 +570,7 @@ var Chemistry;
             if (this.revolve) {
                 this.rotate();
             }
-            this.context.drawImage(this.img, this.startx, this.starty, this.dx - this.width, this.l, (-this.dx / 2 + this.startx) * lscale, (-this.dy / 2 + this.starty) * lscale, (this.dx - this.width) * lscale, (this.l) * lscale);
+            this.context.drawImage(this.img, this.startx, this.starty, this.dx - this.width, this.l, (-this.dx / 2 + this.startx) * lscale, (-this.dy / 2 + this.starty) * lscale, (this.dx - this.width) * lscale, this.l * lscale);
             if (this.l < this.l_last) {
                 this.l++;
             }
@@ -570,14 +583,13 @@ var Chemistry;
             super();
             this.points = [];
             this.stang = 0;
-            this.color = "red";
-            this.color1 = "red";
+            this.color = 'red';
+            this.color1 = 'red';
             this.canvas = canvas;
-            this.context = this.canvas.getContext("2d");
+            this.context = this.canvas.getContext('2d');
             this.vx = this.random(5, 1);
         }
-        calculate() {
-        }
+        calculate() { }
         draw() {
             this.calculate();
             this.context.beginPath();
@@ -586,7 +598,7 @@ var Chemistry;
             this.context.lineTo(990 * lscale, 680 * lscale);
             this.context.lineTo(850 * lscale, 680 * lscale);
             this.context.lineWidth = 3;
-            this.context.fillStyle = "#3399ff";
+            this.context.fillStyle = '#3399ff';
             this.context.closePath();
             this.context.fill();
             this.context.stroke();
@@ -597,9 +609,9 @@ var Chemistry;
             this.context.lineWidth = 2;
             this.context.stroke();
             this.context.stroke();
-            let t1 = new Geo_Text("P", new Point(880, 718), this.canvas);
-            t1.color = "blue";
-            t1.textalingment = "center";
+            let t1 = new Geo_Text('P', new Point(880, 718), this.canvas);
+            t1.color = 'blue';
+            t1.textalingment = 'center';
             t1.draw();
             this.context.beginPath();
             this.context.arc(950 * lscale, 725 * lscale, 18 * lscale, 0, 2 * Math.PI, false);
@@ -607,9 +619,9 @@ var Chemistry;
             this.context.fill();
             this.context.lineWidth = 2;
             this.context.stroke();
-            let t2 = new Geo_Text("H", new Point(950, 718), this.canvas);
-            t2.color = "blue";
-            t2.textalingment = "center";
+            let t2 = new Geo_Text('H', new Point(950, 718), this.canvas);
+            t2.color = 'blue';
+            t2.textalingment = 'center';
             t2.draw();
             this.context.lineWidth = 1;
         }
@@ -618,24 +630,24 @@ var Chemistry;
     class Geo_Text extends Geometry {
         constructor(text, stpt, canvas) {
             super();
-            this.font = "17px Arial";
-            this.color = "black";
+            this.font = '17px Arial';
+            this.color = 'black';
             this.angle = 0;
-            this.textalingment = "left";
+            this.textalingment = 'left';
             this.stpt = stpt;
             this.canvas = canvas;
-            this.context = this.canvas.getContext("2d");
+            this.context = this.canvas.getContext('2d');
             this.text = text;
         }
         draw() {
-            let y = this.font.split("px");
+            let y = this.font.split('px');
             let font_size = parseInt(y[0]) * lscale;
             this.context.font = `${font_size}px Arial`;
             this.context.fillStyle = this.color;
             this.context.textAlign = this.textalingment;
             this.context.save();
             this.context.translate(this.stpt.x * lscale, this.stpt.y * lscale);
-            this.context.rotate(this.angle * Math.PI / 180);
+            this.context.rotate((this.angle * Math.PI) / 180);
             this.context.scale(1, -1);
             this.context.fillText(this.text, 0, 0);
             this.context.restore();
@@ -646,7 +658,7 @@ var Chemistry;
     class Rectangle extends Geometry {
         constructor(l, w, stpt, canvas) {
             super();
-            this.color = "#599d9c";
+            this.color = '#599d9c';
             this.angle = 0;
             this.stpt = stpt;
             this.l = l;
@@ -657,7 +669,7 @@ var Chemistry;
         draw() {
             this.context.save();
             this.context.translate(this.stpt.x * lscale, this.stpt.y * lscale);
-            this.context.rotate(this.angle * Math.PI / 180);
+            this.context.rotate((this.angle * Math.PI) / 180);
             this.context.beginPath();
             this.context.moveTo(0, 0);
             this.context.lineTo(0 + this.l * lscale, 0);
@@ -674,8 +686,8 @@ var Chemistry;
         isinside(point) {
             let x = point.x;
             let y = point.y;
-            if ((x >= this.stpt.x) && (x <= (this.stpt.x + this.l))) {
-                if ((y >= this.stpt.y) && (y <= (this.stpt.y + this.w))) {
+            if (x >= this.stpt.x && x <= this.stpt.x + this.l) {
+                if (y >= this.stpt.y && y <= this.stpt.y + this.w) {
                     return true;
                 }
                 else {
@@ -689,8 +701,8 @@ var Chemistry;
     class Arrow extends Geometry {
         constructor(stpt, pointing_direction, canvas) {
             super();
-            this.pointing_direction = "left";
-            this.color = "green";
+            this.pointing_direction = 'left';
+            this.color = 'green';
             this.stpt = stpt;
             this.pointing_direction = pointing_direction;
             this.canvas = canvas;
@@ -700,17 +712,17 @@ var Chemistry;
             // rotating
             this.context.save();
             this.context.translate(this.stpt.x * lscale, this.stpt.y * lscale);
-            if (this.pointing_direction == "top") {
-                this.context.rotate(-90 * Math.PI / 180);
+            if (this.pointing_direction == 'top') {
+                this.context.rotate((-90 * Math.PI) / 180);
             }
-            else if (this.pointing_direction == "left") {
+            else if (this.pointing_direction == 'left') {
                 this.context.rotate(0);
             }
-            else if (this.pointing_direction == "bottom") {
-                this.context.rotate(90 * Math.PI / 180);
+            else if (this.pointing_direction == 'bottom') {
+                this.context.rotate((90 * Math.PI) / 180);
             }
-            else if (this.pointing_direction == "right") {
-                this.context.rotate(180 * Math.PI / 180);
+            else if (this.pointing_direction == 'right') {
+                this.context.rotate((180 * Math.PI) / 180);
             }
             // drawing lines
             this.context.beginPath();
@@ -724,11 +736,18 @@ var Chemistry;
             //   this.context.fillStyle = this.color;
             //   this.context.fill();
             //   this.context.closePath();
-            this.context.strokeStyle = "#1b7e48";
+            this.context.strokeStyle = '#1b7e48';
             this.context.stroke();
             this.context.restore();
         }
     }
     Chemistry.Arrow = Arrow;
+    class Virtual_circle extends Circle {
+        constructor(stpt, radius, canvas) {
+            super(stpt, radius, canvas);
+        }
+        draw() { }
+    }
+    Chemistry.Virtual_circle = Virtual_circle;
 })(Chemistry || (Chemistry = {}));
 //# sourceMappingURL=geomerty.js.map

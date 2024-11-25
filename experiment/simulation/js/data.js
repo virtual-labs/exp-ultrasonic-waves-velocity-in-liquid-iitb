@@ -1,7 +1,21 @@
+let waves = [
+    {
+        fluid: 'Water',
+        velocity: 1480,
+    },
+    {
+        fluid: 'Glycerine',
+        velocity: 1904,
+    },
+    {
+        fluid: 'Kerosene',
+        velocity: 1324,
+    },
+];
 let data = [
     {
-        "fluid": "Water",
-        "mhz1": [
+        fluid: 'Water',
+        mhz1: [
             [1, 4],
             [2, 28],
             [4, 2],
@@ -23,7 +37,7 @@ let data = [
             [27, 36],
             [29, 10],
         ],
-        "mhz2": [
+        mhz2: [
             [1, 4],
             [1, 41],
             [2, 28],
@@ -45,7 +59,7 @@ let data = [
             [14, 20],
             [15, 7],
         ],
-        "mhz3": [
+        mhz3: [
             [1, 4],
             [1, 28.7],
             [2, 3.4],
@@ -67,7 +81,7 @@ let data = [
             [9, 48.6],
             [10, 23.3],
         ],
-        "mhz4": [
+        mhz4: [
             [1, 4],
             [1, 22.5],
             [1, 41],
@@ -89,7 +103,7 @@ let data = [
             [7, 37],
             [8, 5.5],
         ],
-        "mhz5": [
+        mhz5: [
             [1, 4],
             [1, 18.8],
             [1, 33.6],
@@ -110,11 +124,11 @@ let data = [
             [6, 5.6],
             [6, 20.4],
             [6, 35.2],
-        ]
+        ],
     },
     {
-        "fluid": "Glycerine",
-        "mhz1": [
+        fluid: 'Glycerine',
+        mhz1: [
             [1, 4],
             [2, 49],
             [4, 44],
@@ -134,9 +148,9 @@ let data = [
             [31, 27],
             [33, 22],
             [35, 18],
-            [37, 13]
+            [37, 13],
         ],
-        "mhz2": [
+        mhz2: [
             [1, 4],
             [2, 1.6],
             [2, 49.2],
@@ -158,7 +172,7 @@ let data = [
             [18, 10.8],
             [19, 8.4],
         ],
-        "mhz3": [
+        mhz3: [
             [1, 4],
             [1, 35.7],
             [2, 17.4],
@@ -178,9 +192,9 @@ let data = [
             [11, 11.2],
             [11, 42.9],
             [12, 24.6],
-            [13, 6.3]
+            [13, 6.3],
         ],
-        "mhz4": [
+        mhz4: [
             [1, 4],
             [1, 27.8],
             [2, 1.6],
@@ -200,9 +214,9 @@ let data = [
             [8, 34.8],
             [9, 8.6],
             [9, 32.4],
-            [10, 6.2]
+            [10, 6.2],
         ],
-        "mhz5": [
+        mhz5: [
             [1, 4],
             [1, 23],
             [1, 42],
@@ -222,12 +236,12 @@ let data = [
             [7, 8],
             [7, 27],
             [7, 46],
-            [8, 15]
-        ]
+            [8, 15],
+        ],
     },
     {
-        "fluid": "Kerosene",
-        "mhz1": [
+        fluid: 'Kerosene',
+        mhz1: [
             [1, 4],
             [2, 20],
             [3, 36],
@@ -249,7 +263,7 @@ let data = [
             [24, 46],
             [26, 12],
         ],
-        "mhz2": [
+        mhz2: [
             [1, 4],
             [1, 37.1],
             [2, 20.2],
@@ -269,9 +283,9 @@ let data = [
             [11, 33.6],
             [12, 16.7],
             [12, 49.8],
-            [13, 32.9]
+            [13, 32.9],
         ],
-        "mhz3": [
+        mhz3: [
             [1, 4],
             [1, 26.1],
             [1, 48.2],
@@ -291,9 +305,9 @@ let data = [
             [8, 7.6],
             [8, 29.7],
             [9, 1.8],
-            [9, 23.9]
+            [9, 23.9],
         ],
-        "mhz4": [
+        mhz4: [
             [1, 4],
             [1, 20.6],
             [1, 37.2],
@@ -313,9 +327,9 @@ let data = [
             [6, 19.6],
             [6, 36.2],
             [7, 2.8],
-            [7, 19.4]
+            [7, 19.4],
         ],
-        "mhz5": [
+        mhz5: [
             [1, 4],
             [1, 17.2],
             [1, 30.4],
@@ -335,27 +349,28 @@ let data = [
             [5, 15.2],
             [5, 28.4],
             [5, 41.6],
-            [6, 4.8]
-        ]
-    }
+            [6, 4.8],
+        ],
+    },
 ];
 let val_1_line = 0.05;
 let least_count = 0.001;
 let table1 = [];
-let selected_fluid = "Water";
+let selected_fluid = 'Water';
 let selected_frequency = 3;
 set_table1();
 calculate_table1();
 function set_table1() {
     for (let i = 0; i < data.length; i++) {
         if (selected_fluid == data[i].fluid) {
-            table1 = data[i]["mhz" + selected_frequency];
+            table1 = data[i]['mhz' + selected_frequency];
         }
     }
-    console.log(table1);
+    // console.log(table1);
 }
 function calculate_table1() {
     for (let i = 0; i < table1.length; i++) {
+        table1[i][1] = Math.round(table1[i][1]);
         table1[i][2] = table1[i][0] * val_1_line;
         table1[i][3] = table1[i][2] + table1[i][1] * least_count;
         if (i > 0) {

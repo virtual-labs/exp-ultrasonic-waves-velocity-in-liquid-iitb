@@ -1,5 +1,5 @@
 function verify_values(value, truevalue) {
-    let calculated_value = (truevalue - value) / truevalue * 100;
+    let calculated_value = ((truevalue - value) / truevalue) * 100;
     if (calculated_value <= 4 && calculated_value >= -4) {
         return true;
     }
@@ -35,7 +35,7 @@ function regression_linear(x, y) {
     let pol = [];
     pol[0] = (sumx * sumy - n * sumxy) / (Math.pow(sumx, 2) - n * sumxx);
     pol[1] = (sumy - pol[0] * sumx) / n;
-    return (pol);
+    return pol;
 }
 function ascending_random_array() {
     let arr = new Array();
@@ -50,7 +50,9 @@ function ascending_random_array() {
         if (!found) {
             arr.push(x);
             if (arr.length == 5) {
-                arr.sort(function (a, b) { return a - b; });
+                arr.sort(function (a, b) {
+                    return a - b;
+                });
                 return arr;
             }
         }
@@ -77,12 +79,16 @@ function regression_linear_2variable(x1, x2, y) {
         sumx2y += x2[i] * y[i];
     }
     let pol = [];
-    let a = [[n, sumx1, sumx2], [sumx1, sumx1sq, sumx1x2], [sumx2, sumx1x2, sumx2sq]];
+    let a = [
+        [n, sumx1, sumx2],
+        [sumx1, sumx1sq, sumx1x2],
+        [sumx2, sumx1x2, sumx2sq],
+    ];
     let c = [sumy, sumx1y, sumx2y];
     // console.log(a);
     // console.log(c);
     pol = gauss(a, c);
-    return (pol);
+    return pol;
 }
 function gauss(a, c) {
     let n = c.length;
@@ -104,7 +110,16 @@ function gauss(a, c) {
         }
         x[i] = sum / a[i][i];
     }
-    return (x);
+    return x;
+}
+function show_panel(id) {
+    try {
+        var bsOffcanvas = new bootstrap.Offcanvas(document.getElementById(`offcanvasRight${id}`));
+        bsOffcanvas.show();
+    }
+    catch (error) {
+        console.log(error);
+    }
 }
 // x1 = 1/T
 // x2 = ln(P)/T

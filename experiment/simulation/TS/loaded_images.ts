@@ -1,0 +1,32 @@
+var assembly = new Image();
+assembly.src = './images/Assembly.png';
+
+var meter = new Image();
+meter.src = './images/interferometer.png';
+
+var generator = new Image();
+generator.src = './images/components/generator_HD.webp';
+
+var screw = new Image();
+screw.src = './images/components/screw.webp';
+
+var arrow = new Image();
+arrow.src = './images/components/Arrow.webp';
+
+var ammeter = new Image();
+ammeter.src = './images/components/Ammeter_A.webp';
+
+var scale = new Image();
+scale.src = './images/components/Scale.webp';
+
+var scale2 = new Image();
+scale2.src = './images/components/Scale02.webp';
+
+var scale_hd = new Image();
+scale_hd.src = './images/components/Scale_HD.webp';
+
+var scale_main = new Image();
+scale_main.src = './images/components/main_scale.png';
+
+var scale_vernier = new Image();
+scale_vernier.src = './images/components/screw_HD.webp';
