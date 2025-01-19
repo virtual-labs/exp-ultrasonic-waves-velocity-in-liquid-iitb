@@ -25,3 +25,4 @@ When performing this experiment, various factors such as temperature, pressure, 
 
 ![Diagram](./images/dia1.png)
 ![Diagram](./images/dia2.png)
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"> </script>

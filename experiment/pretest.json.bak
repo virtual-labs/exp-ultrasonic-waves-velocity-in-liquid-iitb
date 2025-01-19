@@ -1,0 +1,49 @@
+[
+    {
+        "question": "What is the working principle of an ultrasonic interferometer?",
+        "qid": 1,
+        "option_a": "Doppler effect",
+        "option_b": "Interference of sound waves",
+        "option_c": "Reflection of sound waves",
+        "option_d": "Resonance of sound waves",
+        "correct_option": "b"
+    },
+    {
+        
+
+        "question": "Ultrasonic waves",
+        "qid": 2,
+        "option_a": "Have frequencies higher than 20kHz",
+        "option_b": "Have high energy",
+        "option_c": "Are inaudibility to human ear",
+        "option_d": "All of the options provided",
+        "correct_option": "d"
+    },
+    {
+        "question": "When do we note the reading on micrometer scale?",
+        "qid": 3,
+        "option_a": "When the current in ammeter reaches minima",
+        "option_b": "When the current in ammeter reaches to a maxima",
+        "option_c": "When the current in ammeter becomes zero",
+        "option_d": "None of the options provided",
+        "correct_option": "b"
+    },
+    {
+        "question": "The correct flow of steps to complete the experiment is",
+        "qid": 4,
+        "option_a": "First the cell is filled with the given liquid and the &#39;adj&#39; and &#39;gain&#39 of the generator is set at a proper value. 2. The micrometer screw is moved till the anode current reaches to a maximum. 3. The distance‘d’ between two successive maxima and minima is obtained from the readings taken. 4. The wavelength of the ultrasound is calculated using the‘d’ value and hence the velocity of the ultrasonic wave can be calculated using the known frequency.",
+        "option_b": "First the micrometer screw is moved till the anode current reaches to a maximum. 2. The cell is filled with the given liquid and the &#39;adj&#39; and &#39;gain&#39; of the generator is set at a proper value. 3. The distance‘d’ between two successive maxima and minima is obtained from the readings taken. 4. The wavelength of the ultrasound is calculated using the‘d’ value and hence the velocity of the ultrasonic wave can be calculated using the known frequency.",
+        "option_c": "First the micrometer screw is moved till the anode current reaches to a maximum. 2. The cell is filled with the given liquid and the &#39;adj&#39; and &#39;gain&#39; of the generator is set at a proper value. 3. The distance‘d’ between two successive maxima and minima is obtained from the readings taken. 4. The frequency of the ultrasound is calculated using the‘d’ value and hence the velocity of the ultrasonic wave can be calculated using the known wavelength.",
+        "option_d": "None of the options provided",
+        "correct_option": "a"
+    },
+    {
+        "question": "Which of the following factors does not affect the speed of sound in an ultrasonic interferometer experiment?",
+        "qid": 5,
+        "option_a": "Temperature of the medium",
+        "option_b": "Pressure of the medium",
+        "option_c": "Frequency of the ultrasonic waves",
+        "option_d": "Density of the medium",
+        "correct_option": "c"
+    }
+]
