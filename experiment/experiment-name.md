@@ -1,1 +1,1 @@
-## Experiment name
+## Determination of ultrasonic waves velocity in liquid media

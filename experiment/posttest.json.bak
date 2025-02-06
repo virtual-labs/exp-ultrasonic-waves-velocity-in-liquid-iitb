@@ -1,0 +1,48 @@
+[
+    {
+        "question": "Which of the following statements is true about the interference of ultrasonic waves?",
+        "qid": 1,
+        "option_a": "Interference only occurs in a medium with high density.",
+        "option_b": "Interference only occurs at a specific frequency.",
+        "option_c": "Interference occurs regardless of the frequency.",
+        "option_d": "Interference occurs only when the ultrasonic waves are in-phase.",
+        "correct_option": "d"
+    },
+    {
+
+        "question": " What is the purpose of knobs marked &#39;Adj&#39; and &#39;Gain&#39;",
+        "qid": 2,
+        "option_a": "The needle on the Ammeter is adjusted by &#39;Adj&#39; and the sensitivity of the instrument for greater deflection is set by &#39;Gain&#39;.",
+        "option_b": "To increase or decrease the frequency of ultrasonic waves generated.",
+        "option_c": "To change the medium",
+        "option_d": "The needle on the Ammeter is adjusted by ‘Gain’ and the sensitivity of the instrument for greater deflection is set by &#39;Adj&#39;.",
+        "correct_option": "a"
+    },
+    {
+        "question": "What is the purpose of the water column in an ultrasonic interferometer?",
+        "qid": 3,
+        "option_a": "To absorb ultrasonic waves",
+        "option_b": "To reflect ultrasonic waves",
+        "option_c": "To alter the frequency of ultrasonic waves",
+        "option_d": "To create interference patterns",
+        "correct_option": "d"
+    },
+    {
+        "question": "In an ultrasonic interferometer experiment, if the water level is adjusted to produce maximum interference, what does it indicate about the path difference of the ultrasonic waves?",
+        "qid": 4,
+        "option_a": "The path difference is zero.",
+        "option_b": "The path difference is half a wavelength.",
+        "option_c": "The path difference is a full wavelength.",
+        "option_d": "The path difference is variable.",
+        "correct_option": "c"
+    },
+    {
+        "question": "What is the advantage of using an ultrasonic interferometer over other methods for measuring the speed of sound?",
+        "qid": 5,
+        "option_a": "It is more accurate and consistent",
+        "option_b": "It is less expensive.",
+        "option_c": "It is faster.",
+        "option_d": "It is easier to set up.",
+        "correct_option": "a"
+    }
+]
