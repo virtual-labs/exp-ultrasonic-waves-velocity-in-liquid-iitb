@@ -177,10 +177,10 @@ function load_images() {
     scene1.add(scale_2);
     var line = new Chemistry.Rectangle(0, 50, new Chemistry.Point(75, 5), canvas3);
     scene1.add(line);
-    check_cir = new Chemistry.Circle(new Chemistry.Point(1550, 500), 20, canvas1);
+    check_cir = new Chemistry.Circle(new Chemistry.Point(1550, 500), 40, canvas1);
     check_cir.color = 'red';
     scene1.add(check_cir);
-    var txt = new Chemistry.Geo_Text('Indicator', new Chemistry.Point(1580, 485), canvas1);
+    var txt = new Chemistry.Geo_Text('Indicator', new Chemistry.Point(1600, 485), canvas1);
     txt.font = '40 Arial';
     scene1.add(txt);
 }
@@ -224,10 +224,7 @@ function set_frequency() {
     console.log('freq= ', freq.value);
     pp.showdescription(`<p class='discription_text'>Take main scale and vernier scale reading.</p>
 
-   <br>
-
-   <p class='discription_text'>Note the reading when indicator truns green.</p>
-   <br>
+   <p class='discription_text'>Note the reading when indicator turns green.</p>
    <p class='discription_text'>Use left and right button beside RF Generator to rotate vernier scale. Click & hold the button for fast rotation.</p>`, 3);
     show_panel(3);
     selected_frequency = parseInt(freq.value);
@@ -609,9 +606,9 @@ function right_touch_end() {
     clearInterval(right_hold_id);
 }
 function move_to_activity4() {
-    pp.showdescription(`<p class='discription_text'>Note the reading when indicator truns green.</p>
-      <br>
-      <p class='discription_text'>After taking main scale and vernier scale reading, click on the Next button.</p>`, 3);
+    pp.showdescription(`<p class='discription_text'>Note the reading when indicator turns green.</p>
+      <p class='discription_text'>After taking main scale and vernier scale reading, click on the Next button.</p>
+      <p class='discription_text'>Use left and right button beside RF Generator to rotate vernier scale. Click & hold the button for fast rotation.</p>`, 3);
     pp.addtorightpannel(first_btn, 3);
 }
 // activity3();

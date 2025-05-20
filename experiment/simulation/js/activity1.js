@@ -103,8 +103,11 @@ function a1_canvas_mapping() {
     context.scale(1, -1);
 }
 function a1_draw_all_components() {
-    var sq = new Chemistry.Custome_image(generator, new Chemistry.Point(1450, 500), 747 * 0.35, 2126 * 0.35, canvas);
+    var sq = new Chemistry.Custome_image(radio_frequency_generator, new Chemistry.Point(1050, 500), 374 * 0.6, 805 * 0.6, canvas);
     sq.name = 'generator';
+    scene.add(sq);
+    var sq = new Chemistry.Custome_image(micrometer, new Chemistry.Point(1550, 500), 86 * 0.7, 593 * 0.7, canvas);
+    sq.name = 'micrometer';
     scene.add(sq);
     var sq = new Chemistry.Custome_image(ammeter, new Chemistry.Point(500, 450), 621, 326, canvas);
     sq.name = 'meter';
@@ -122,6 +125,12 @@ function a1_load_questions() { }
     });
     question.push({
         srno: 2,
+        question: "Select <span style='color: #018fc3'>Micrometer</span>",
+        ans: 'micrometer',
+        hint: ['Tower like component', 'Has a scale'],
+    });
+    question.push({
+        srno: 3,
         question: "Select <span style='color: #018fc3'> Interferometer </span>",
         ans: 'meter',
         hint: ['Rectangular', 'Has on/off button'],
@@ -152,11 +161,13 @@ function a1_display_current_question() {
 }
 function load_higlighted_images() {
     highlighted_images = [
-        [generator, generator],
+        [radio_frequency_generator, radio_frequency_generator],
+        [micrometer, micrometer],
         [ammeter, ammeter],
     ];
     a1_labels = [
-        new Chemistry.Text('Radio frequency generator', new Chemistry.Point(1280, 80), canvas),
+        new Chemistry.Text('Radio frequency generator', new Chemistry.Point(870, 200), canvas),
+        new Chemistry.Text('Micrometer', new Chemistry.Point(1480, 200), canvas),
         new Chemistry.Text('Interferometer', new Chemistry.Point(320, 230), canvas),
     ];
     a1_labels.map((label) => {
@@ -177,7 +188,7 @@ function a1_random_questions() {
         if (!found) {
             arrayofrandquestion.push(no);
         }
-        if (arrayofrandquestion.length >= 2) {
+        if (arrayofrandquestion.length >= 3) {
             break;
         }
     }
@@ -278,7 +289,7 @@ function a1_check_isinside(x, y) {
     }
 }
 function a1_change_question() {
-    if (current_question > 2) {
+    if (current_question > 3) {
         scene.draw();
         for (let j = 0; j < a1_index.length; j++) {
             a1_labels[a1_index[j]].draw();

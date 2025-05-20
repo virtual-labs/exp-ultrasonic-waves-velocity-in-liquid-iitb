@@ -67,6 +67,9 @@ function calculate_mean() {
 function verify_act4() {
     let val1 = (document.getElementById(`inp1`));
     let val2 = (document.getElementById(`inp2`));
+    console.log(table1);
+    console.log(table1[0][2]);
+    console.log(table1[0][3]);
     if (!verify_values(parseFloat(val1.value), table1[0][2])) {
         alert(`Please check actual MSR value`);
         return;
