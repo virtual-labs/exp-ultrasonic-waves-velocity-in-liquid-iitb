@@ -20,4 +20,9 @@ var scale_main = new Image();
 scale_main.src = './images/components/main_scale.png';
 var scale_vernier = new Image();
 scale_vernier.src = './images/components/screw_HD.webp';
+var micrometer = new Image();
+micrometer.src = './images/components/micrometer.png';
+var radio_frequency_generator = new Image();
+radio_frequency_generator.src =
+    './images/components/radio_frequency_generator.png';
 //# sourceMappingURL=loaded_images.js.map
